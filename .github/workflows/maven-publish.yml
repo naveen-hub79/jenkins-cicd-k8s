@@ -27,7 +27,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - run: mvn --batch-mode --update-snapshots verify
-    - run: mkdir staging && cp /home/runner/work/jenkins-cicd-k8s/jenkins-cicd-k8s/target/*.jar staging
+    - run: mkdir staging && cp target/*.war staging
     - uses: actions/upload-artifact@v3
       with:
         name: Package
