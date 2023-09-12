@@ -35,6 +35,13 @@ jobs:
         name: Package
         path: staging
 
+    -
+      name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+    -
+      name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2        
+
     # - name: Publish to GitHub Packages Apache Maven
     #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
     #   env:
