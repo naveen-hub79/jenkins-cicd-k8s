@@ -3,7 +3,9 @@
 
 name: Maven Package Building
 
-on: [push]
+on: 
+  push:
+    branches: [ master ]
 
 jobs:
   build:
