@@ -36,28 +36,38 @@ jobs:
         name: Package
         path: staging
 
-    -
-      name: Set up QEMU
-      uses: docker/setup-qemu-action@v2
-    -
-      name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2    
-      with:
-        version: v0.7.0
+    # -
+    #   name: Set up QEMU
+    #   uses: docker/setup-qemu-action@v2
+    # -
+    #   name: Set up Docker Buildx
+    #   uses: docker/setup-buildx-action@v2    
+    #   with:
+    #     version: v0.7.0
 
-    -
-      name: Login to Docker Hub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    # -
+    #   name: Login to Docker Hub
+    #   uses: docker/login-action@v2
+    #   with:
+    #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+    #     password: ${{ secrets.DOCKERHUB_TOKEN }}
         
-    -
-      name: Build and push
-      uses: docker/build-push-action@v4
+    # -
+    #   name: Build and push
+    #   uses: docker/build-push-action@v4
+    #   with:
+    #     push: true
+    #     tags: naveensmily79/naveen-maven-own:latest    
+
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Build & push Docker image
       with:
-        push: true
-        tags: naveensmily79/naveen-maven-own:latest      
+        image: naveensmily79/naveen-maven-own
+        tags: v1, latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     # - name: Publish to GitHub Packages Apache Maven
     #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
