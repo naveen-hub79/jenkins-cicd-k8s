@@ -36,11 +36,11 @@
 	</dependencies>
 
 	<build>
+		<finalName>NaveenJenkinsK8sApplication</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<finalName>NaveenJenkinsK8sApplication</finalName>
 			</plugin>
 		</plugins>
 	</build>
