@@ -17,5 +17,10 @@ testing cici jenkins for k8s
 4. install kubernetes continuos deploy plugin version 1.0.0 in advanced settings of plugin section,upload that plugin and deploy.
 5. add dockerhub,git,kubeconfig in global credential configuration
 
+### Note:
+```
+In the Dockerfile we need to remove ROOT directory before we put ROOT.war into webapps directory, otherwise our ROOT.war will not be deployed on tomcat
+```
+
 
 
