@@ -1,0 +1,6 @@
+---
+releases:
+
+  - name: naveenmavenrelease
+    chart: ./naveen-maven-app
+    installed: true
