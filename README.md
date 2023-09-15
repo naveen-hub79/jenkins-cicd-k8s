@@ -19,7 +19,7 @@ testing cici jenkins for k8s
 
 ### Note:
 ```
-In the Dockerfile we need to remove ROOT directory before we put ROOT.war into webapps directory, otherwise our ROOT.war will not be deployed on tomcat
+In the Dockerfile we need to remove ROOT directory before we put ROOT.war into webapps directory, otherwise our ROOT.war will not be deployed on tomcat.
 ```
 
 
