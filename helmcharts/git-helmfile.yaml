@@ -1,4 +1,5 @@
 # Change the name of file to helmfile.yaml before using it
+# This file used when the repo is in git not on the local machine
 ---
 repositories:
   - name: naveenmavenappp
