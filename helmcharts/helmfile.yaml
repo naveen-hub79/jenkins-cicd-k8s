@@ -1,3 +1,5 @@
+# use this helmfile if you clone this helm repo into youur local
+# name of helmfile should be helmfile.yaml
 ---
 releases:
 
