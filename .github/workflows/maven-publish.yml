@@ -7,7 +7,7 @@ name: Maven Package Building
 on: 
   push:
     branches: [ master ]
-    paths-ignore: ['**/README.md']
+    paths-ignore: ['**/README.md', '../../helmcharts/']
 
 jobs:
   build:
