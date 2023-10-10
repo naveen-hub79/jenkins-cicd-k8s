@@ -1,0 +1,10 @@
+# Change the name of file to helmfile.yaml before using it
+---
+repositories:
+  - name: naveenmavenappp
+    url: git+https://github.com/naveen-hub79/jenkins-cicd-k8s@helmcharts?ref=master&sparse=0
+releases:
+
+  - name: mymavenrelease
+    chart: helmcharts/naveen-maven-app
+    installed: true
