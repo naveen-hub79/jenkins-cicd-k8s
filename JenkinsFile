@@ -56,7 +56,7 @@ pipeline {
                     git config user.email "naveen.xyz@gmail.com"
                     git config user.name "Naveen Chevulamaddi"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    cp manifests/deploy-template.yaml manifests/maven-app-deploy.yaml
+                    cp manifest-template/deploy-template.yaml manifests/maven-app-deploy.yaml
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" manifests/maven-app-deploy.yaml
                     git add manifests/maven-app-deploy.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
