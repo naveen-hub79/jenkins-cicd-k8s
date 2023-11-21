@@ -53,8 +53,7 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    pwd
-                    ls -la
+                    git config --global --add safe.directory /var/lib/jenkins/workspace/*
                     git config user.email "naveen.xyz1@gmail.com"
                     git config user.name "Naveen Chevulamaddi1"
                     BUILD_NUMBER=${BUILD_NUMBER}
