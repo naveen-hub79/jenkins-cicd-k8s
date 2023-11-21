@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: maven
-          image: naveensmily79/naveen-maven-own:1
+          image: naveensmily79/naveen-maven-own:2
           ports:
             - containerPort: 8080
           env:
