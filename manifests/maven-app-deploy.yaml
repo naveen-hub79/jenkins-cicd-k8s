@@ -18,13 +18,17 @@ spec:
         - name: maven
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           image: naveensmily79/naveen-maven-own:11
 =======
           image: naveensmily79/naveen-maven-own:11
 >>>>>>> b1668b5 (Update deployment image to version 11)
 =======
-          image: naveensmily79/naveen-maven-own:11
+          image: naveensmily79/naveen-maven-own:2
 >>>>>>> 2ea12d8 (Update deployment image to version 2)
+=======
+          image: naveensmily79/naveen-maven-own:13
+>>>>>>> 4dfb89b (Update deployment image to version 13)
           ports:
             - containerPort: 8080
           env:
